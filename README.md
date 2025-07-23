@@ -1,10 +1,10 @@
-# 🤖 AI-Powered RFP Proposal Generator
+#  AI-Powered RFP Proposal Generator
 
 This project automates the generation of professional proposals in response to RFP (Request for Proposal) documents. It uses a local Large Language Model (LLM) like **Mistral 7B** through **LM Studio**, combines document parsing, semantic search with FAISS, and generates `.docx` proposal files via a user-friendly **Streamlit web app**.
 
 ---
 
-## ✅ Features
+## Features
 
 - Upload RFP documents (**PDF**, **DOCX**, or **TXT**)  
   _OR_ manually input RFP details in the provided fields  
@@ -23,7 +23,7 @@ This project automates the generation of professional proposals in response to R
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```bash
 .
@@ -46,7 +46,7 @@ RFP_proposal-main/
 
 ---
 
-## 🔹 Phase 1: Data Preparation & Understanding
+##  Phase 1: Data Preparation & Understanding
 
 1. **Initial Dataset Collection**
    - Collected RFPs from sources like **CommBuys**.
@@ -65,7 +65,7 @@ RFP_proposal-main/
 
 ---
 
-## 🔹 Phase 2: Semantic Search (RAG)
+##  Phase 2: Semantic Search (RAG)
 
 3. **Embedding Past Proposals**
    - Used Sentence Transformers to embed past RFP JSON entries.
@@ -78,7 +78,7 @@ RFP_proposal-main/
 
 ---
 
-## 🔹 Phase 3: LLM Integration
+## Phase 3: LLM Integration
 
 5. **LLM Setup**
    - Chose **Mistral 7B Instruct v0.3** for offline generation.
@@ -95,7 +95,7 @@ RFP_proposal-main/
 
 ---
 
-## 📄 Phase 4: Document Generation
+##  Phase 4: Document Generation
 
 8. **DOCX Writer**
    - Created `docx_writer.py` to:
@@ -104,7 +104,7 @@ RFP_proposal-main/
 
 ---
 
-## 🌐 Phase 5: Web UI (Streamlit)
+##  Phase 5: Web UI (Streamlit)
 
 9. **Frontend with Streamlit**
    - Developed `app.py` to:
@@ -116,7 +116,7 @@ RFP_proposal-main/
 
 ---
 
-## ⚙️ Phase 6: Automation Utilities
+##  Phase 6: Automation Utilities
 
 10. **Script to Build FAISS Index**
     - `build_proposal_vector_store.py` embeds training data and builds vector store
@@ -126,7 +126,7 @@ RFP_proposal-main/
 
 ---
 
-# 🧠 LM Studio Setup Guide for Offline RFP Proposal Generation
+#  LM Studio Setup Guide for Offline RFP Proposal Generation
 
 This guide explains how to set up **LM Studio** with the **Mistral 7B Instruct** model to enable offline LLM-powered proposal generation.
 
@@ -134,10 +134,10 @@ The local API will be used by this project to generate high-quality proposal con
 
 ---
 
-## ✅ Step 1: Download and Install LM Studio
+##  Step 1: Download and Install LM Studio
 
 1. Visit the official LM Studio website:  
-   👉 https://lmstudio.ai
+    https://lmstudio.ai
 
 2. Choose the appropriate version for your OS:
    - macOS (Intel or Apple Silicon)
@@ -148,7 +148,7 @@ The local API will be used by this project to generate high-quality proposal con
 
 ---
 
-## ✅ Step 2: Download Mistral 7B Model
+##  Step 2: Download Mistral 7B Model
 
 Inside LM Studio:
 
@@ -164,7 +164,7 @@ Inside LM Studio:
 
 ---
 
-## ✅ Step 3: Run Local API Server
+##  Step 3: Run Local API Server
 
 1. Go to the **“Developer”** tab in LM Studio.
 2. Click on **“Start Server”**
@@ -175,7 +175,7 @@ Inside LM Studio:
 
 ---
 
-## ✅ Step 4: Configure Environment Variables
+##  Step 4: Configure Environment Variables
 
 Create a `.env` file in your project root with the following contents:
 
@@ -191,12 +191,12 @@ These settings will be used by the project to connect with the local Mistral mod
 You're now ready to run the proposal generator offline with full functionality!
 
 
-## 📦 Download code from github
+##  Download code from github
 ```bash
 git clone https://github.com/shipra901/RFP_proposal
 cd RFP_proposal
-
-### 🚀 How to Run the Streamlit App
+```
+###  How to Run the Streamlit App
 
 ```bash
 # 1. Activate your virtual environment
@@ -208,5 +208,7 @@ pip install -r requirements.txt
 
 # 3. Run the Streamlit app
 streamlit run app.py
+
+```
 
 
