@@ -185,3 +185,11 @@ These settings will be used by the project to connect with the local Mistral mod
 ---
 
 You're now ready to run the proposal generator offline with full functionality!
+
+
+## 📦 Installation
+```bash
+git clone https://github.com/shipra901/RFP_proposal
+cd RFP_proposal
+pip install -r requirements.txt
+
