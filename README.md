@@ -191,9 +191,22 @@ These settings will be used by the project to connect with the local Mistral mod
 You're now ready to run the proposal generator offline with full functionality!
 
 
-## 📦 Installation
+## 📦 Download code from github
 ```bash
 git clone https://github.com/shipra901/RFP_proposal
 cd RFP_proposal
+
+### 🚀 How to Run the Streamlit App
+
+```bash
+# 1. Activate your virtual environment
+source .venv/bin/activate         # For Mac/Linux
+# .venv\\Scripts\\activate        # For Windows
+
+# 2. Install dependencies if not done
 pip install -r requirements.txt
+
+# 3. Run the Streamlit app
+streamlit run app.py
+
 
