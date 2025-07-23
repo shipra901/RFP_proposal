@@ -27,17 +27,21 @@ This project automates the generation of professional proposals in response to R
 
 ```bash
 .
-├── app.py                       # Streamlit frontend app
-├── build_proposal_vector_store.py  # Builds FAISS index from training proposals
-├── docx_writer.py              # Converts proposal sections to .docx format
-├── extract_rfp_fields.py       # Extracts fields from uploaded RFPs
-├── llm.py                      # Calls local Mistral LLM via API
-├── rag_helper.py               # Retrieves similar past examples using FAISS
-├── requirements.txt            # Python dependencies
-├── data/
-│   ├── rfp_data_raw.json       # Raw extracted RFP JSON (from dataset or file)
-│   ├── faiss_index/            # FAISS vector store directory
-│   └── proposal_output/        # Final generated `.docx` proposals
+
+RFP_proposal-main/
+├── app.py # Main Streamlit app
+├── docx_writer.py # Saves generated proposal to DOCX
+├── proposal_evaluator.py # Quality & win scoring, section check, readability
+├── rag_helper.py # FAISS search for similar proposals
+├── llm.py # Calls LLM (Mistral) via LM Studio
+├── extract_rfp_fields.py # Extract fields from RFP files
+├── data/ # Stores templates, training data, input/output JSONs
+├── output/ # Final generated .docx proposals
+├── download_data/ # Optional: external data assets
+├── faiss_store/ # FAISS vector index files
+├── build_proposal_vector_store.py# Builds vector store from past proposals
+├── requirements.txt # Python dependencies
+├── README.md # Project documentation
 ```
 
 ---
